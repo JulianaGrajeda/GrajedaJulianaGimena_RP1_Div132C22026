@@ -83,7 +83,7 @@ git push -u origin master
     --- REACCION MIENTRAS ESCRITURA
 
     buscador.addEventListener("input", () => {
-        console.log(input.value);
+        console.log(buscador.value);
     });
 
     --- CHECKBOX  
