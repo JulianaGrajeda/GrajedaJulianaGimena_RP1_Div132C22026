@@ -38,6 +38,43 @@ git push -u origin master
         - Hola Juliana
 
 --------------------------------------------------
+                    LABEL:INPUT
+--------------------------------------------------
+
+    --- circulo
+
+        type="radio"
+
+    <label>
+        <input type="radio" name="nombreFiltro" value="active"> Active 
+    </label>
+
+    --- checkbox
+
+        type="checkbox"
+
+    	<label>
+            <input type="checkbox" name="filtro" value="active">
+            Active
+        </label>
+
+    --- SABER SI UN CHECKBOX ESTÁ MARCADO
+
+        const checkbox = document.querySelector('input[type="checkbox"]');
+        console.log(checkbox.checked);
+
+        if (checkbox.checked === true) {
+            console.log("El checkbox está marcado");
+        } else {
+            console.log("El checkbox no está marcado");
+        }
+
+    --- search
+
+        //sin label
+        <input type="search" id="busqueda" placeholder="Buscar...">
+
+--------------------------------------------------
                     FUNCIONES
 --------------------------------------------------
 
@@ -134,11 +171,24 @@ git push -u origin master
 
     --- GUARDAR
 
-    localStorage.setItem("libros", JSON.stringify(datos));
+    localStorage.setItem("listaNombre", JSON.stringify(datos));
 
     --- RECUPERACION SEGURA
 
     const lista = JSON.parse(localStorage.getItem("libros")) || [];
+
+--------------------------------------------------
+                    Datos JSON
+--------------------------------------------------
+
+const listaJSON = `[
+    {
+        "id": 1;
+    },
+    {
+        "id": 2;
+    }
+]`;
 
 
 --------------------------------------------------
