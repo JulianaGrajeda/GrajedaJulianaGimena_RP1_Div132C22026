@@ -1,0 +1,9 @@
+<------------------ LINK DEL REPOSITORI ------------------>
+
+https://github.com/JulianaGrajeda/GrajedaJulianaGimena_RP1_Div132C22026.git
+
+<-------------------- PASOS PARA SUBIR ------------------->
+
+git add .
+git commit -m "Nuevos Cambios: Archivos de Parcial"
+git push -u origin master
