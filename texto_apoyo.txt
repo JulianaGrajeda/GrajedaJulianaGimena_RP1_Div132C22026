@@ -1,9 +1,222 @@
-<------------------ LINK DEL REPOSITORI ------------------>
+--------------------------------------------------
+                NAVEGAR POR TXT
+--------------------------------------------------
+
+    --- BUSQUEDA TECLADO
+
+        ctrl + f
+
+--------------------------------------------------
+                LINK REPOSITORIO
+--------------------------------------------------
 
 https://github.com/JulianaGrajeda/GrajedaJulianaGimena_RP1_Div132C22026.git
 
-<-------------------- PASOS PARA SUBIR ------------------->
+--------------------------------------------------
+                PUSH REPOSITORIO
+--------------------------------------------------
 
 git add .
 git commit -m "Nuevos Cambios: Archivos de Parcial"
 git push -u origin master
+
+--------------------------------------------------
+                        NOTAS
+--------------------------------------------------
+
+- "===" ---> Comparación extricta. 
+
+    Ej. 5 === "5" --> False 
+    Ej. 5 === 5 --> True 
+
+- addEventListener recibe el nombre del evento como texto: "click", "input", "change".
+
+- Para checkbox: evento "change"; consultar checkbox.checked.
+
+- Usá comillas invertidas ` ` para insertar variables con ${...}.
+        console.log(`Hola ${nombre}`);
+        - Hola Juliana
+
+--------------------------------------------------
+                    FUNCIONES
+--------------------------------------------------
+
+    function nombreFuncion(lista) {
+        
+    }
+
+    function init() {
+        
+    }
+
+--------------------------------------------------
+                    EVENTOS
+--------------------------------------------------
+
+    elemento.addEventListener("click", () => {
+
+        // código que se ejecuta al hacer clic
+
+    });
+
+    --- CON ID
+
+    const elemento = document.getElementById("idElemento");
+
+    elemento.addEventListener("click", () => {
+        console.log("Hiciste click");
+    });
+
+    --- TECLADO
+
+    input.addEventListener("keydown", (evento) => {
+        if (evento.key === "Enter") {
+            // ejecutar
+        }
+    });
+
+    --- INPUT
+
+    const buscador = document.getElementById("buscadorID");
+    const texto = buscador.value.toLowerCase().trim();
+
+    --- REACCION MIENTRAS ESCRITURA
+
+    buscador.addEventListener("input", () => {
+        console.log(input.value);
+    });
+
+    --- CHECKBOX  
+
+    checkbox.addEventListener("change", () => {
+        console.log(checkbox.checked); // true o false
+    });
+
+--------------------------------------------------
+         SELECCIONAR ELEMENTOS DEL DOM
+--------------------------------------------------
+
+    -ID:  document.getElementById("books-container");
+    -CSS: document.querySelector(".boton"); 
+    - CSS: document.querySelector("#searchInput"); // primer ID coincidente
+
+--------------------------------------------------
+                 DOMContentLoaded
+--------------------------------------------------
+
+- window.addEventListener("DOMContentLoaded", init);
+
+--------------------------------------------------
+                RECORRER UN ARRAY
+--------------------------------------------------
+
+    --- FOR EACH
+
+    array.forEach((elemento) => {
+        // hacer algo con cada elemento
+    });
+
+    --- FILTRO
+
+    const resultados = items.filter((item) =>
+        item.titulo.toLowerCase().includes(consulta)
+    );
+
+    --- ARRAY VACIO?
+
+    if (libros.length === 0) {
+        // array vacío
+    }
+
+--------------------------------------------------
+                LOCAL STORAGE
+--------------------------------------------------
+
+    --- GUARDAR
+
+    localStorage.setItem("libros", JSON.stringify(datos));
+
+    --- RECUPERACION SEGURA
+
+    const lista = JSON.parse(localStorage.getItem("libros")) || [];
+
+
+--------------------------------------------------
+                    TABLA
+--------------------------------------------------
+
+    Orden mental:
+    1. Seleccionar contenedor.
+    2. Vaciarlo.
+    3. Comprobar si hay datos.
+    4. Crear tabla y cabecera.
+
+        const tabla = document.createElement("table");
+        const cabecera = document.createElement("thead");
+
+        cabecera.innerHTML = `
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        `;
+
+        tabla.appendChild(cabecera);
+
+    5. Recorrer la lista con forEach.
+    6. Crear filas y agregarlas al cuerpo.
+
+        lista.forEach((item) => {
+            const fila = document.createElement("tr");
+
+            fila.innerHTML = `
+                <td></td>
+                <td></td>
+                <td></td>
+            `;
+
+            cuerpo.appendChild(fila);
+        });
+
+    7. Agregar tabla al contenedor.
+
+        tabla.appendChild(cuerpo);
+        contenedor.appendChild(tabla);
+
+
+--------------------------------------------------
+                    onerror
+--------------------------------------------------
+
+    --- IMAGENES
+
+    <img
+        src="${libro.portada || 'https://placehold.co/300x400'}"
+        alt="Portada de ${libro.titulo ?? 'libro'}"
+        onerror="this.onerror=null; this.src='https://placehold.co/300x400'"
+    >
+
+
+--------------------------------------------------
+                URLS ÚTILES
+--------------------------------------------------
+
+--- Imágenes de reemplazo / placeholder:
+
+    https://placehold.co/300x400
+    https://placehold.co/150x200
+    https://placehold.co/1500x2500
+
+    Formato general:
+    https://placehold.co/ANCHOxALTO
+    Ejemplo: https://placehold.co/300x400
+
+--- Iconos:
+
+    https://fonts.google.com/icons
+    Google Fonts Icons: elegí un icono y seguí las instrucciones de uso.
+
+--- ICON RED SOCIAL:
+
+    https://cdn-icons-png.flaticon.com/512/847/847969.png
