@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperatorio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+
+        <p class="info-curso">Parcial 1 - División 132</p>
+
+    </header>
+
+    <main>
+        <section class="menu-section">
+
+            <div class="header-container">
+                <h1>
+                    Burger House
+                </h1>
+                
+                <div class="carrito">
+                    <span>Carrito (<span id="contador-carrito"> 0 </span>)</span>
+                </div>
+
+            </div>
+
+            <hr class="separador-header">
+
+            <!-- Filtros y busqueda -->
+            <div class="controles">
+
+                <div class="filtros">
+                    
+                    <div class="radio-filtros">
+                        <label>
+                            <input type="radio" name="menu-filter" value="Todas" checked>Todas</label> 
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="menu-filter" value="Clásicas">Clasicas</label> 
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="menu-filter" value="Especiales">Especiales </label>
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="menu-filter" value="Combos"> Combos </label>
+                        </label>
+                    </div>
+
+                    <div class="search">
+                        <input type="search" id="searchInput" placeholder="Buscar productos">
+                    </div>
+                </div>
+
+                <div class="orden">
+                    <label>
+                        <select name="opciones" id="opciones">
+                            <option value="" disabled selected hidden> Ordenar por Precio </option>
+                            <option value="ordenMenor">Menor Precio</option>
+                            <option value="ordenMayor">Mayor Precio</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Contenedor de productos -->
+            <div class="products-container" id="productsContainer">
+                
+            </div>
+
+        </section>
+
+        <aside class="carrito-section">
+            <div class="carrito-container">
+
+                <h2> Mi carrito</h2>
+
+                <!-- Aquí se dibujará el resumen de los productos en carrito -->
+                <ul id="cart-list"></ul>
+
+                <div class="total-carrito">
+                    <p>Total: <span id="cart-total">$0.00</span></p>
+                </div>
+
+                <button id="btn-vaciar-carrito">Vaciar Carrito</button>
+
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p>Juliana Gimena Grajeda</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

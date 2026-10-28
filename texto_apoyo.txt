@@ -37,6 +37,14 @@ git push -u origin master
         console.log(`Hola ${nombre}`);
         - Hola Juliana
 
+- Uso del root...
+
+    :root {
+        --color-principal: #2c3e50;
+        --color-secundario: #3498db;
+        --bordes-redondeados: 8px;
+    }
+
 --------------------------------------------------
                     LABEL:INPUT
 --------------------------------------------------
